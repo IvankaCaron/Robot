@@ -1,11 +1,11 @@
 #from model import Robot
 
 class Robot:
-    def __init__(self, nom):
+    def __init__(self, nom, x = 0, y = 0, direction = "E"):
         self._nom = nom
-        self._x = 0
-        self._y = 0
-        self._direction = 'E'
+        self._x = x
+        self._y = y
+        self._direction = direction
     
     def avance(self):
         #Nord

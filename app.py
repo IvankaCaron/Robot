@@ -1,5 +1,5 @@
-from model import Robot
-from modelNG import RobotNG
+from robots.model import Robot
+from robots.modelNG import RobotNG
 
 robot1 = Robot("Cedric")
 print(robot1._nom)
@@ -46,3 +46,7 @@ ana.etat()
 ana.turbostop()
 ana.avance()
 ana.etat()
+
+print("novy robot")
+fifi = Robot("Fifi", x=1, y=2, direction="O")
+fifi.etat()

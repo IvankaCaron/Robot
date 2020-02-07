@@ -1,4 +1,4 @@
-from model import Robot
+from robots.model import Robot
 
 class RobotNG(Robot):
     
@@ -18,9 +18,18 @@ class RobotNG(Robot):
         self.droite()
 
     def gauche(self):
-        self.droite()
-        self.droite()
-        self.droite()
+        #Nord
+        if self._direction == "N":
+            self._direction = "O"
+        #Est
+        elif self._direction == "E":
+            self._direction = "N"
+        #Sud
+        elif self._direction == "S":
+            self._direction = "E"
+        #Ouest
+        elif self._direction == "O":
+            self._direction = "S"
 
     def turbostart(self):
         self.__turbo = True
